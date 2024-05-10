@@ -38,9 +38,17 @@
                     <li>
                         <a href="#" id="RegistroEntrada" class="nav-link text-white">
                             <svg class="bi pe-none me-2" width="16" height="16">
-                                <use xlink:href="#speedometer2"></use>
+                                <use xlink:href="#entrada"></use>
                             </svg>
                             Registro de entrada
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="MovimentacoesDoDia" class="nav-link text-white">
+                            <svg class="bi pe-none me-2" width="16" height="16">
+                                <use xlink:href="#movimentacoes"></use>
+                            </svg>
+                            Movimentações do dia
                         </a>
                     </li>
                     <li>
@@ -48,7 +56,15 @@
                             <svg class="bi pe-none me-2" width="16" height="16">
                                 <use xlink:href="#table"></use>
                             </svg>
-                            Movimentações hoje
+                            Mensalistas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white">
+                            <svg class="bi pe-none me-2" width="16" height="16">
+                                <use xlink:href="#table"></use>
+                            </svg>
+                            Histórico financeiro
                         </a>
                     </li>
                     <li>
@@ -116,6 +132,11 @@
                                         <th scope="row">NÍVEL DE ACESSO</th>
                                         <td>Administrador</td>
                                     </tr>
+                                    <tr>
+                                        <th scope="row">ENTRADAS</th>
+                                        <td>R$ 0,00</td>
+                                    </tr>
+
                                 </table>
 
                             </form>
@@ -189,7 +210,7 @@
 
                             </div>
 
-                            <!-- Movimentações Hoje -->
+                            <!-- Movimentações do dia -->
                             <div class="card-body">
                                 <form id="movimentacoes" class="row" action="">
 
@@ -240,6 +261,12 @@
                         $("#painel").fadeIn();
                         $("#movimentacoes").hide();
                         $("#entrada").hide();
+                    });
+                    $("MovimentacoesDoDia").click(function () {
+                        $("#painel").hide();
+                        $("#entrada").hide();
+                        $("#movimentacoes").fadeIn();
+
                     });
 
                 </script>
