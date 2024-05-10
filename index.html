@@ -250,7 +250,7 @@
 
                 <script>
                     $("#entrada").hide();
-                    $("#movimentacoes").hide();
+                   // $("#movimentacoes").hide();
                     // Alternar entre telas:
                     $("#RegistroEntrada").click(function () {
                         $("#painel").hide();
@@ -263,9 +263,10 @@
                         $("#entrada").hide();
                     });
                     $("MovimentacoesDoDia").click(function () {
+                        $("#movimentacoes").fadeIn();
                         $("#painel").hide();
                         $("#entrada").hide();
-                        $("#movimentacoes").fadeIn();
+
 
                     });
 
