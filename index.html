@@ -13,8 +13,19 @@
     #body {
         margin: 0%;
     }
-    #Titulo{
-        color: rgb(228, 99, 53);
+
+    #Titulo {
+        color: rgb(202, 67, 13);
+
+    }
+
+
+    ul li a:hover {
+        font-size: 13pt;
+        transition: 0.5s;
+        text-shadow: 2px 2px 4px #181818;
+        font-weight: bold;
+        background-color: rgb(202, 67, 13);
     }
 </style>
 
@@ -23,16 +34,16 @@
         <!-- MENU LATERAL -->
         <div class="col-md-2 bg-dark vh-100 p-2">
             <a href="#" class=" text-white text-decoration-none">
-                <svg class="bi pe-none me-2" width="25" height="45">
+                <svg class="bi pe-none me-2 " width="25" height="45">
                     <use xlink:href="#bootstrap"></use>
                 </svg>
-                <span class="fs-4" id="Titulo">Estacione Bem</span>
+                <span class="fs-2 fw-bold" id="Titulo">Estacione Bem</span>
             </a>
 
-            <ul class="nav nav-pills" style="display: block;">
+            <ul class="nav nav-pills " style="display: block;">
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link active" aria-current="page" id="Painel">
+                    <a href="#" class="nav-link text-white " aria-current="page" id="Painel">
                         <svg class="bi pe-none me-2" width="16" height="16">
                             <use xlink:href="#home"></use>
                         </svg>
@@ -41,7 +52,7 @@
                 </li>
                 <li>
                     <a href="#" id="RegistroEntrada" class="nav-link text-white">
-                        <svg class="bi pe-none me-2" width="16" height="16">
+                        <svg class="bi pe-none me-2 " width="16" height="16">
                             <use xlink:href="#entrada"></use>
                         </svg>
                         Registro de entrada
@@ -413,17 +424,15 @@
         $("#mensalistas").hide();
         $("#relatorio").hide();
 
-
-
+        
         // Alternar entre telas:
         $("#RegistroEntrada").click(function () {
             $("#painel").hide();
-            // $("#painel").removeClass('active');
-            //  $("#RegistroEntrada").addClass('active');
             $("#movimentacoes").hide();
             $("#entrada").fadeIn();
             $("#mensalistas").hide();
             $("#relatorio").hide();
+
         });
         $("#Painel").click(function () {
             $("#painel").fadeIn();
@@ -474,7 +483,7 @@
 
         const layout = {
             title: "Histórico financeiro",
-            xaxis: { title: "Mês"  },
+            xaxis: { title: "Mês" },
             yaxis: { title: "Real" },
         };
 
