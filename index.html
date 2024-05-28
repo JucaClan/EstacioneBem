@@ -32,12 +32,12 @@
 <body>
     <div class="row">
         <!-- MENU LATERAL -->
-        <div class="col-md-2 bg-dark vh-100 p-2">
+        <div class="col-md-2 bg-dark vh-100 p-2 menuLateral">
             <a href="#" class=" text-white text-decoration-none">
                 <svg class="bi pe-none me-2 " width="25" height="45">
                     <use xlink:href="#bootstrap"></use>
                 </svg>
-                <span class="fs-2 fw-bold" id="Titulo">Estacione Bem</span>
+                <span class="fs-4 fw-bold" id="Titulo">Estacione Bem</span>
             </a>
 
             <ul class="nav nav-pills " style="display: block;">
@@ -90,14 +90,6 @@
                         Configurações
                     </a>
                 </li>
-                <!-- <li>
-                    <a href="#" class="nav-link text-white">
-                        <svg class="bi pe-none me-2" width="16" height="16">
-                            <use xlink:href="#people-circle"></use>
-                        </svg>
-                        Gerar relatório
-                    </a>
-                </li> -->
                 <hr>
             </ul>
             <hr>
@@ -110,8 +102,8 @@
                     <strong>Usuário</strong>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                    <li><a class="dropdown-item" href="#">Perfil</a></li>
-                    <li><a class="dropdown-item" href="#">Configurações</a></li>
+                    <li><a class="dropdown-item" href="#" type="button" data-bs-toggle="modal"
+                            data-bs-target="#modalPerfil">Perfil</a></li>
                     <li><a class="dropdown-item" href="#">Nome do estacionamento</a></li>
                     <li><a class="dropdown-item" href="#">Contrato</a></li>
                     <li>
@@ -402,6 +394,95 @@
         </div>
     </div>
 
+    <!-- Modal -->
+
+    <!-- Perfil -->
+    <div class="modal fade" id="modalPerfil" tabindex="-1" aria-labelledby="modalperfilLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalperfilnLabel">Perfil</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="card p-4">
+                        <div class=" image d-flex flex-column justify-content-center align-items-center"> <button
+                                class="btn btn-secondary"> <img
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFRbGzH16ONBKxPFysaNPBuX3oOurb0cXkaM1RXM9T4A&s"
+                                    height="100" width="100" /></button> <span class="name mt-3">Juca Estacione</span>
+                            <span class="idd">@Jucacannon</span>
+
+                            <div class=" d-flex mt-2"> <button class="btn1 btn-dark" type="button"
+                                    data-bs-toggle="modal" data-bs-target="#modalEditarPerfil">Editar Perfil</button>
+                            </div>
+                            <div class="text mt-3"> <span>Administrador do estacionamento<br> </div>
+
+                            <div class=" px-2 rounded mt-4 date "> <span class="join">Ingressou Maio, 2024</span> </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Editar Perfil -->
+    <div class="modal fade" id="modalEditarPerfil" tabindex="-1" aria-labelledby="modaleditarPerfilLabel"
+        aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modaleditarPerfilnLabel">Perfil</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class=" d-flex justify-content-center align-items-center mb-3">
+                            <h4 class="text-center">Configurações do perfil</h4>
+                        </div>
+                        <div class="image d-flex flex-column justify-content-center align-items-center">
+                            <div class="d-flex flex-column align-items-center text-center p-1 "><img
+                                    class="rounded-circle " width="150px"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFRbGzH16ONBKxPFysaNPBuX3oOurb0cXkaM1RXM9T4A&s"><span
+                                    class="font-weight-bold">Jucacannon</span><span
+                                        class="text-black-50">Juca123@gmail.com</span><span> </span>
+                            </div>
+
+                        </div>
+                        <div class="mb-3  d-flex flex-column justify-content-center ">
+                            <label for="username">Nome Completo</label>
+                            <input type="text" placeholder="Insira seu nome completo" id="nome" name="nome">
+                        </div>
+                        <div class="mb-3  d-flex flex-column justify-content-center">
+                            <label for="email">Email</label>
+                            <input type="email" placeholder="Insira seu email" id="email" name="email">
+                        </div>
+                        <div class="mb-3 d-flex flex-column justify-content-center">
+                            <label for="tel">Telefone</label>
+                            <input type="text" placeholder="Insira seu número de telefone celular" id="telefone"
+                                name="telefone">
+                        </div>
+                        <div class="mb-3 d-flex flex-column justify-content-center">
+                            <label for="password">Senha</label>
+                            <input type="password" placeholder="Insira sua senha" id="senha" name="senha">
+                        </div>
+                        <br>
+
+                        <div class="cadastrar mb-3 d-flex flex-column justify-content-center">
+                            <button type="submit" class="botao" href="#">Editar perfil</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -424,7 +505,6 @@
         $("#mensalistas").hide();
         $("#relatorio").hide();
 
-        
         // Alternar entre telas:
         $("#RegistroEntrada").click(function () {
             $("#painel").hide();
